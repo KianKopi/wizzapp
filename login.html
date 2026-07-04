@@ -1,0 +1,474 @@
+<!DOCTYPE html><html lang="en" data-theme="dark"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Wizz</title>
+    <link rel="icon" type="image/webp" href="img/site-logo.webp">
+    <link href="/_external/fonts.googleapis.com/css2/index.html" rel="stylesheet">
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #1a1a1a;
+            --accent-red: #F4D03F;
+            --accent-purple: #FDB913;
+            --text-primary: #ffffff;
+            --text-secondary: #a3a3a3;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --font-heading: 'Outfit', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: linear-gradient(180deg, rgba(50, 40, 10, 1) 0%, rgba(20, 15, 5, 1) 100%);
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at top center, rgba(244, 208, 63, 0.2) 0%, rgba(253, 185, 19, 0.1) 40%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .login-container {
+            width: 100%;
+            max-width: 420px;
+            position: relative;
+            z-index: 1;
+        }
+        .login-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .login-header a {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            text-decoration: none;
+        }
+        .login-header a span {
+            color: var(--accent-red);
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+        }
+        .login-card {
+            background: rgba(20, 15, 35, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(244, 208, 63, 0.3);
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37), 0 0 30px rgba(244, 208, 63, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        .login-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at top right, rgba(244, 208, 63, 0.1), transparent 60%);
+            pointer-events: none;
+        }
+        .login-title {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .login-subtitle {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 0.6rem;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .form-input {
+            width: 100%;
+            padding: 1rem 1.2rem;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: white;
+            font-size: 0.95rem;
+            font-family: var(--font-body);
+            transition: 0.3s;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: var(--accent-red);
+            background: rgba(0, 0, 0, 0.4);
+            box-shadow: 0 0 0 3px rgba(244, 208, 63, 0.2);
+        }
+        .form-input::placeholder {
+            color: rgba(255, 255, 255, 0.3);
+        }
+        .btn-login {
+            width: 100%;
+            padding: 1.2rem;
+            background: linear-gradient(135deg, #FDB913 0%, #F4D03F 100%);
+            border: none;
+            border-radius: 50px;
+            color: #000;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(253, 185, 19, 0.4);
+            margin-top: 1.5rem;
+        }
+        .btn-login:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(253, 185, 19, 0.6);
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            transition: 0.3s;
+        }
+        .back-link:hover {
+            color: var(--text-primary);
+        }
+        .forgot-password-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+        }
+        .forgot-password-container label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            color: var(--text-secondary);
+        }
+        .forgot-password-container a {
+            color: var(--accent-red);
+            text-decoration: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .forgot-password-container a:hover {
+            color: var(--accent-purple);
+        }
+        .auth-form {
+            display: none;
+        }
+        .auth-form.active {
+            display: block;
+            animation: fadeIn 0.4s ease;
+        }
+        .form-footer {
+            margin-top: 1.5rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        .signup-disabled {
+            background: rgba(244, 208, 63, 0.1);
+            border: 1px solid rgba(244, 208, 63, 0.3);
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .signup-disabled i {
+            font-size: 1.5rem;
+            color: var(--accent-red);
+            flex-shrink: 0;
+        }
+        .signup-disabled p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            animation: slideIn 0.3s ease;
+            z-index: 99999;
+            max-width: 350px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            display: block !important;
+        }
+        .notification.error {
+            background: rgba(244, 208, 63, 0.15);
+            border: 1px solid rgba(244, 208, 63, 0.5);
+            color: #F4D03F;
+        }
+        .notification.warning {
+            background: rgba(244, 208, 63, 0.15);
+            border: 1px solid rgba(244, 208, 63, 0.5);
+            color: #F4D03F;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        @keyframes slideOut {
+            from {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <a href="index.html" class="back-link">
+            <i class="fa-solid fa-arrow-left"></i> Back to Home
+        </a>
+        <div class="login-header">
+            <a href="index.html">WI<span>ZZ</span></a>
+        </div>
+        <div class="login-card">
+            <h2 class="login-title" id="form-title">Welcome Back</h2>
+            <p class="login-subtitle" id="form-subtitle">Login to your premium account</p>
+            <!-- Login Form -->
+            <form id="login-form" class="auth-form active">
+                <div class="form-group">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" class="form-input" placeholder="name@example.com" required="">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-input" placeholder="••••••••" required="">
+                </div>
+                <div class="forgot-password-container">
+                    <label>
+                        <input type="checkbox" style="cursor: pointer;">
+                        Remember me
+                    </label>
+                    <a id="forgot-password-link">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn-login">Sign In</button>
+            </form>
+            <!-- Sign Up Form -->
+            <form id="signup-form" class="auth-form">
+                <div class="signup-disabled">
+                    <i class="fa-solid fa-lock"></i>
+                    <p><strong>Registration Disabled:</strong> New accounts can only be created through the official
+                        Wizz application for security.</p>
+                </div>
+                <button id="download-btn-login" class="btn-login" style="background: linear-gradient(90deg, #FDB913 0%, #F4D03F 100%); text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 0.5rem; color: #000; border: none; cursor: pointer;">
+                    <i class="fa-brands fa-windows"></i> Download App
+                </button>
+            </form>
+            <div class="form-footer">
+                <span id="toggle-text">Don't have an account? <a href="#" class="toggle-link" style="cursor: pointer; color: var(--accent-red); text-decoration: none; font-weight: 600;">Sign
+                        up</a></span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        const loginForm = document.getElementById('login-form');
+        const signupForm = document.getElementById('signup-form');
+        const forgotPasswordLink = document.getElementById('forgot-password-link');
+        const emailInput = loginForm.querySelector('input[type="email"]');
+        const formTitle = document.getElementById('form-title');
+        const formSubtitle = document.getElementById('form-subtitle');
+        const toggleText = document.getElementById('toggle-text');
+        function showNotification(message, type = 'error') {
+            document.querySelectorAll('.notification').forEach(n => n.remove());
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.textContent = message;
+            notification.style.cssText = `
+                position: fixed !important;
+                top: 20px !important;
+                right: 20px !important;
+                padding: 1rem 1.5rem !important;
+                border-radius: 10px !important;
+                font-weight: 600 !important;
+                font-size: 0.95rem !important;
+                z-index: 999999 !important;
+                max-width: 380px !important;
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(124, 58, 237, 0.2) !important;
+                background: linear-gradient(135deg, rgba(244, 208, 63, 0.15) 0%, rgba(253, 185, 19, 0.1) 100%) !important;
+                border: 1px solid rgba(244, 208, 63, 0.5) !important;
+                color: #F4D03F !important;
+                left: auto !important;
+                bottom: auto !important;
+                backdrop-filter: blur(8px) !important;
+                -webkit-backdrop-filter: blur(8px) !important;
+                animation: slideIn 0.3s ease !important;
+            `;
+            document.body.appendChild(notification);
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease !important';
+                setTimeout(() => notification.remove(), 300);
+            }, 4000);
+        }
+        function toggleForms() {
+            loginForm.classList.toggle('active');
+            signupForm.classList.toggle('active');
+            if (loginForm.classList.contains('active')) {
+                formTitle.textContent = 'Welcome Back';
+                formSubtitle.textContent = 'Login to your premium account';
+                toggleText.innerHTML = 'Don\'t have an account? <a href="#" class="toggle-link" style="cursor: pointer; color: var(--accent-red); text-decoration: none; font-weight: 600;">Sign up</a>';
+            } else {
+                formTitle.textContent = 'Create Account';
+                formSubtitle.textContent = 'Join Wizz today';
+                toggleText.innerHTML = 'Already have an account? <a href="#" class="toggle-link" style="cursor: pointer; color: var(--accent-red); text-decoration: none; font-weight: 600;">Sign in</a>';
+            }
+            document.querySelector('.toggle-link').addEventListener('click', (e) => {
+                e.preventDefault();
+                toggleForms();
+            });
+        }
+        document.querySelectorAll('.toggle-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                toggleForms();
+            });
+        });
+        forgotPasswordLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            const email = emailInput.value.trim();
+            if (!email) {
+                showNotification('Please enter your email address', 'warning');
+            } else {
+                showNotification(`No account found with email: ${email}`, 'error');
+            }
+        });
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            showNotification('Invalid credentials. Please try again.', 'error');
+        });
+        signupForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            showNotification('Registration is disabled for security reasons', 'error');
+        });
+    </script>
+<script>
+// Developer Tools Protection
+(function() {
+    // F12 ve Ctrl+Shift+I korumas�
+    document.addEventListener('keydown', function(e) {
+        // F12
+        if (e.key === 'F12') {
+            e.preventDefault();
+            return false;
+        }
+        // Ctrl+Shift+I (Inspect)
+        if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+            e.preventDefault();
+            return false;
+        }
+        // Ctrl+Shift+C (Inspect Element)
+        if (e.ctrlKey && e.shiftKey && e.key === 'C') {
+            e.preventDefault();
+            return false;
+        }
+        // Ctrl+Shift+J (Console)
+        if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+            e.preventDefault();
+            return false;
+        }
+        // Ctrl+Shift+K (Console - Firefox)
+        if (e.ctrlKey && e.shiftKey && e.key === 'K') {
+            e.preventDefault();
+            return false;
+        }
+    });
+    // Right-click korumas�
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        return false;
+    });
+    // DevTools a��lm�� m� kontrol et
+    let devtools = { open: false, orientation: null };
+    const threshold = 160;
+    setInterval(function() {
+        if (window.outerHeight - window.innerHeight > threshold || 
+            window.outerWidth - window.innerWidth > threshold) {
+            if (!devtools.open) {
+                devtools.open = true;
+                console.clear();
+                console.log('%cDeveloper Tools Disabled', 'color: red; font-size: 20px; font-weight: bold;');
+            }
+        } else {
+            devtools.open = false;
+        }
+    }, 500);
+})();
+</script>
+<script defer="" src="/_external/static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516/index.html" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;0e397988d8ee4e38bfe9f6e6c2db6d38&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+
+
+
+
+
+
+</body></html>

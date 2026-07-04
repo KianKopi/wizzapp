@@ -1,0 +1,832 @@
+<!DOCTYPE html><html lang="en" data-theme="dark"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wizz - Watch Together</title>
+<link href="https://framerusercontent.com/images/3tklJzFZB3UNzUyhdt0jTR3uNE.png" rel="icon" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wizz - Watch Together</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="img/site-logo.webp">
+    <meta name="description" content="The ultimate premium watch party experience. Sync video with friends in 4K HDR.">
+    <meta name="keywords" content="watch party, yubo, sync video, watch together, movies online, anime party, netflix party alternative, stream with friends, 4k watch party">
+    <!-- Open Graph / Facebook / Discord -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/_external/yubo.app/index.html">
+    <meta property="og:title" content="Wizz- Watch Together">
+    <meta property="og:description" content="Host premium watch parties with friends in 4K HDR. No lag, perfect sync. Join the revolution.">
+    <meta property="og:image" content="/_external/via.placeholder.com/1200x630/index.html">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="/_external/yubo.app/index.html">
+    <meta property="twitter:title" content="Wizz- Watch Together">
+    <meta property="twitter:description" content="Host premium watch parties with friends in 4K HDR. No lag, perfect sync. Join the revolution.">
+    <meta property="twitter:image" content="/_external/via.placeholder.com/1200x630/index.html">
+    <!-- Fonts -->
+    <link rel="preconnect" href="/_external/fonts.googleapis.com/index.html">
+    <link rel="preconnect" href="/_external/fonts.gstatic.com/index.html" crossorigin="">
+    <link href="/_external/fonts.googleapis.com/css2/index.html" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+<style data-notifications="true">
+                    @keyframes slideIn {
+                        from {
+                            transform: translateX(400px);
+                            opacity: 0;
+                        }
+                        to {
+                            transform: translateX(0);
+                            opacity: 1;
+                        }
+                    }
+                    @keyframes slideOut {
+                        from {
+                            transform: translateX(0);
+                            opacity: 1;
+                        }
+                        to {
+                            transform: translateX(400px);
+                            opacity: 0;
+                        }
+                    }
+                </style></head>
+<body>
+    <div id="landing-page">
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="logo">WI<span>ZZ</span></a>
+                <div class="nav-links">
+                    <a href="#features" class="nav-link">Features</a>
+                    <a href="#pricing" class="nav-link">Pricing</a>
+                    <a href="#download" class="nav-link">Download</a>
+                </div>
+                <div class="desktop-only" style="display: flex; align-items: center; gap: 1.5rem;">
+                    <a href="room.html" class="btn btn-outline" style="border: 1px solid var(--accent-red); color: var(--accent-red);">+ Create Room</a>
+                    <a href="login.html" class="btn btn-primary">Login</a>
+                </div>
+            </div>
+        </nav>
+        <header class="hero">
+            <div class="hero-bg"></div>
+            <!-- Premium Nebula Animation -->
+            <div class="hero-nebula-container">
+                <div class="nebula-blob blob-1"></div>
+                <div class="nebula-blob blob-2"></div>
+                <div class="nebula-blob blob-3"></div>
+            </div>
+            <!-- Particle Effects -->
+            <div class="particles-container">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="typing-text">Watch Together.<br>Anywhere. Forever.</h1>
+                        <p class="fade-in-text">Experience the next evolution of watch parties. Sync Netflix, YouTube,
+                            and more with friends
+                            in
+                            stunning 4K HDR quality with zero latency.</p>
+                        <div class="btn-group">
+                            <a href="room.html" class="btn-hero-primary">Create Room</a>
+                            <a href="#features" class="btn-hero-outline">Explore Features</a>
+                        </div>
+                    </div>
+                    <div class="hero-visual" id="hero-visual-3d" style="perspective: 1000px;">
+                        <!-- New 3D Metallic Logo with Red Glow -->
+                        <div class="logo-floater">
+                            <img src="img/wizz-movies-3d.webp" alt="Wizz Movies" class="hero-logo-img" id="hero-logo" style="max-width: 100%; height: auto; display: block; transform-style: preserve-3d; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="partners-section">
+            <div class="container">
+                <div class="partners-header">OUR PARTNERS</div>
+                <!-- Poster Showcase added as per user request -->
+                <!-- Poster Showcase Slider (Infinity Scroll) -->
+                <div class="poster-showcase">
+                    <div class="poster-slider" style="transition: transform 0.1s ease-out; transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1);">
+                        <!-- Slide Track (Doubled for seamless loop) -->
+                        <div class="poster-track">
+                            <!-- Original Set -->
+                            <img src="https://images.weserv.nl/?url=static.tvmaze.com/uploads/images/original_untouched/576/1440521.jpg&amp;h=250&amp;q=75&amp;output=webp" alt="Squid Game">
+                            <img src="https://images.weserv.nl/?url=static.tvmaze.com/uploads/images/original_untouched/595/1489169.jpg&amp;h=250&amp;q=75&amp;output=webp" alt="Stranger Things">
+                            <img src="https://images.weserv.nl/?url=static.tvmaze.com/uploads/images/original_untouched/455/1138820.jpg&amp;h=250&amp;q=75&amp;output=webp" alt="Riverdale">
+                            <img src="https://images.weserv.nl/?url=static.tvmaze.com/uploads/images/original_untouched/3/9744.jpg&amp;h=250&amp;q=75&amp;output=webp" alt="Naruto">
+                            <img src="https://images.weserv.nl/?url=static.tvmaze.com/uploads/images/original_untouched/376/940830.jpg&amp;h=250&amp;q=75&amp;output=webp" alt="Money Heist">
+                            <img src="https://images.weserv.nl/?url=static.tvmaze.com/uploads/images/original_untouched/540/1351542.jpg&amp;h=250&amp;q=75&amp;output=webp" alt="Hellbound">
+                            <img src="https://images.weserv.nl/?url=static.tvmaze.com/uploads/images/original_untouched/456/1140750.jpg&amp;h=250&amp;q=75&amp;output=webp" alt="Demon Slayer">
+                            <img src="https://images.weserv.nl/?url=static.tvmaze.com/uploads/images/original_untouched/536/1340287.jpg&amp;h=250&amp;q=75&amp;output=webp" alt="Arcane">
+                            <!-- Duplicate Set -->
+                            <img src="https://images.weserv.nl/?url=static.tvmaze.com/uploads/images/original_untouched/576/1440521.jpg&amp;h=250&amp;q=75&amp;output=webp" alt="Squid Game">
+                            <img src="https://images.weserv.nl/?url=static.tvmaze.com/uploads/images/original_untouched/595/1489169.jpg&amp;h=250&amp;q=75&amp;output=webp" alt="Stranger Things">
+                            <img src="https://images.weserv.nl/?url=static.tvmaze.com/uploads/images/original_untouched/455/1138820.jpg&amp;h=250&amp;q=75&amp;output=webp" alt="Riverdale">
+                            <img src="https://images.weserv.nl/?url=static.tvmaze.com/uploads/images/original_untouched/3/9744.jpg&amp;h=250&amp;q=75&amp;output=webp" alt="Naruto">
+                            <img src="https://images.weserv.nl/?url=static.tvmaze.com/uploads/images/original_untouched/376/940830.jpg&amp;h=250&amp;q=75&amp;output=webp" alt="Money Heist">
+                            <img src="https://images.weserv.nl/?url=static.tvmaze.com/uploads/images/original_untouched/540/1351542.jpg&amp;h=250&amp;q=75&amp;output=webp" alt="Hellbound">
+                            <img src="https://images.weserv.nl/?url=static.tvmaze.com/uploads/images/original_untouched/456/1140750.jpg&amp;h=250&amp;q=75&amp;output=webp" alt="Demon Slayer">
+                            <img src="https://images.weserv.nl/?url=static.tvmaze.com/uploads/images/original_untouched/536/1340287.jpg&amp;h=250&amp;q=75&amp;output=webp" alt="Arcane">
+                        </div>
+                    </div>
+                    <!-- Fade Overlays -->
+                    <div class="showcase-overlay"></div>
+                </div>
+                <div class="partners-grid">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" class="partner-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney+_logo.svg" alt="Disney+" class="partner-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Prime_Video.png" alt="Prime Video" class="partner-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/HBO_Max_Logo.svg" alt="HBO Max" class="partner-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube" class="partner-logo">
+                </div>
+            </div>
+        </section>
+        <section id="features" class="section-padding">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <h2>Why Choose Wizz?</h2>
+                    <p style="color: var(--text-secondary); margin-top: 1rem;">Engineered for the ultimate viewing
+                        experience.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fa-solid fa-bolt feature-icon"></i>
+                        <h3>Zero Latency</h3>
+                        <p>Instant synchronization guarantees you never miss a beat or a laugh with your friends.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fa-solid fa-wand-magic-sparkles feature-icon"></i>
+                        <h3>4K HDR Support</h3>
+                        <p>Crystal clear visual quality. Support for high dynamic range content for premium members.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fa-solid fa-users feature-icon"></i>
+                        <h3>Unlimited Rooms</h3>
+                        <p>Create as many public or private rooms as you want. Full control over moderation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="stats section-padding">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h2>100k+</h2>
+                        <p>Active Users</p>
+                    </div>
+                    <div class="stat-item">
+                        <h2>5M+</h2>
+                        <p>Hours Watched</p>
+                    </div>
+                    <div class="stat-item">
+                        <h2>50+</h2>
+                        <p>Platforms Supported</p>
+                    </div>
+                    <div class="stat-item">
+                        <h2>4.9/5</h2>
+                        <p>User Rating</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-padding profile-section-glow">
+            <div class="container">
+                <div class="hero-content" style="gap: 5rem;">
+                    <div class="hero-visual" style="perspective: none;">
+                        <!-- Custom Profile UI Code Component -->
+                            <div class="profile-ui-wrapper">
+                            <div class="profile-ui-card">
+                                <div class="profile-header">
+                                    <h3>Profile Customization</h3>
+                                </div>
+                                <div class="profile-input-group">
+                                    <label class="profile-label">Nickname</label>
+                                    <div class="profile-input">
+                                        Alex_Streamer<span class="typing-cursor"></span>
+                                    </div>
+                                </div>
+                                <div class="profile-avatars-row">
+                                    <img src="https://api.dicebear.com/9.x/notionists/svg?seed=Felix" class="profile-avatar-mock">
+                                    <img src="https://api.dicebear.com/9.x/notionists/svg?seed=Aneka" class="profile-avatar-mock">
+                                    <img src="https://api.dicebear.com/9.x/notionists/svg?seed=Zoe" class="profile-avatar-mock">
+                                    <img src="https://api.dicebear.com/9.x/notionists/svg?seed=Max" class="profile-avatar-mock active">
+                                    <img src="https://api.dicebear.com/9.x/notionists/svg?seed=Luna" class="profile-avatar-mock">
+                                </div>
+                                <button class="profile-save-btn">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-text">
+                        <h2 class="text-gradient-gold" style="font-size: 3.5rem; margin-bottom: 1.5rem; font-family: 'Outfit', sans-serif; font-weight: 800;">
+                            Express Yourself</h2>
+                        <p style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.2rem; font-weight: 500;">
+                            Your profile is your identity. Customize your avatar, track your watch time, and show off
+                            your
+                            badges.
+                            With Wizz Premium, you unlock exclusive borders and animated profile effects.
+                        </p>
+                        <ul class="features-list" style="margin-bottom: 2.5rem;">
+                            <li style="font-weight: 600;"><i class="fa-solid fa-paintbrush" style="color: var(--accent-red);"></i> Custom Avatars
+                                &amp;
+                                Banners</li>
+                            <li style="font-weight: 600;"><i class="fa-solid fa-chart-line" style="color: var(--accent-red);"></i> Detailed Watch
+                                Statistics</li>
+                            <li style="font-weight: 600;"><i class="fa-solid fa-medal" style="color: var(--accent-red);"></i> Achievement Badges
+                            </li>
+                        </ul>
+                        <a href="#download" class="btn btn-primary">Start Customizing</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-padding">
+            <div class="container">
+                <div style="display: flex; justify-content: space-between; align-items: end; margin-bottom: 2rem;">
+                    <div>
+                        <h2>Live Now</h2>
+                        <p style="color: var(--text-secondary);">Join public watch parties happening right now.</p>
+                    </div>
+                    <button id="btn-load-more" class="btn btn-outline" style="padding: 0.5rem 1.2rem; font-size: 0.8rem;">View
+                        All</button>
+                </div>
+                <div class="features-grid" id="live-rooms-grid">
+                    <!-- Live Room 1: Dark -->
+                    <div class="room-card">
+                        <div class="room-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&amp;w=600&amp;auto=format&amp;fit=crop" alt="Dark Series" class="room-image">
+                            <div class="room-badges">
+                                <span class="badge badge-live">LIVE</span>
+                                <span class="badge badge-viewers"><i class="fa-solid fa-user" style="margin-right:4px;"></i>
+                                    1,540</span>
+                            </div>
+                        </div>
+                        <div class="room-content">
+                            <div class="room-info">
+                                <h3>Dark: Season 3 Finale</h3>
+                                <div class="room-host">
+                                    <i class="fa-solid fa-clock" style="color: #ffd700;"></i>
+                                    <span>TimeTraveler</span>
+                                </div>
+                                <div class="room-participants" style="margin-top: 0.5rem;">
+                                    <small style="color:#aaa;">+1.5k watching</small>
+                                </div>
+                            </div>
+                            <a href="room.html" class="btn-room-action">Join Room</a>
+                        </div>
+                    </div>
+                    <!-- Live Room 2: Sex Education -->
+                    <div class="room-card">
+                        <div class="room-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1594909122845-11baa439b7bf?q=80&amp;w=600&amp;auto=format&amp;fit=crop" alt="Sex Education" class="room-image">
+                            <div class="room-badges">
+                                <span class="badge badge-live">LIVE</span>
+                                <span class="badge badge-viewers"><i class="fa-solid fa-user" style="margin-right:4px;"></i>
+                                    2,100</span>
+                            </div>
+                        </div>
+                        <div class="room-content">
+                            <div class="room-info">
+                                <h3>Sex Education Marathon</h3>
+                                <div class="room-host">
+                                    <i class="fa-solid fa-school" style="color: #C0C0C0;"></i>
+                                    <span>MoordaleHigh</span>
+                                </div>
+                                <div class="room-participants" style="margin-top: 0.5rem;">
+                                    <small style="color:#aaa;">+2k watching</small>
+                                </div>
+                            </div>
+                            <a href="room.html" class="btn-room-action">Join Room</a>
+                        </div>
+                    </div>
+                    <!-- Live Room 3: Stranger Things -->
+                    <div class="room-card">
+                        <div class="room-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&amp;w=600&amp;auto=format&amp;fit=crop" alt="Stranger Things" class="room-image">
+                            <div class="room-badges">
+                                <span class="badge badge-live">LIVE</span>
+                                <span class="badge badge-viewers"><i class="fa-solid fa-user" style="margin-right:4px;"></i>
+                                    3,420</span>
+                            </div>
+                        </div>
+                        <div class="room-content">
+                            <div class="room-info">
+                                <h3>Stranger Things 4 Vol. 2</h3>
+                                <div class="room-host">
+                                    <i class="fa-solid fa-dungeon" style="color: #F4D03F;"></i>
+                                    <span>HawkinsLab</span>
+                                </div>
+                                <div class="room-participants" style="margin-top: 0.5rem;">
+                                    <small style="color:#aaa;">+3k watching</small>
+                                </div>
+                            </div>
+                            <a href="room.html" class="btn-room-action">Join Room</a>
+                        </div>
+                    </div>
+                    <!-- Live Room 4: Friday Night Horror (Hidden) -->
+                    <div class="room-card room-card-hidden" style="display: none;">
+                        <div class="room-image-wrapper">
+                            <!-- B&W Clown Image -->
+                            <img src="https://images.unsplash.com/photo-1509248961158-e54f6934749c?q=80&amp;w=600&amp;auto=format&amp;fit=crop" alt="Horror" class="room-image" style="filter: grayscale(100%) contrast(1.2);">
+                            <div class="room-badges">
+                                <span class="badge badge-live">LIVE</span>
+                                <span class="badge badge-viewers"><i class="fa-solid fa-user" style="margin-right:4px;"></i>
+                                    666</span>
+                            </div>
+                        </div>
+                        <div class="room-content">
+                            <div class="room-info">
+                                <h3>Friday Night Horror</h3>
+                                <div class="room-host">
+                                    <i class="fa-solid fa-ghost" style="color: #F4D03F;"></i>
+                                    <span style="color: #999;">SpookySkele</span>
+                                </div>
+                                <div class="room-participants" style="margin-top: 0.5rem; display: flex; align-items: center;">
+                                    <div class="avatar-pile">
+                                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="User">
+                                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Aneka" alt="User">
+                                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Mark" alt="User">
+                                    </div>
+                                    <small style="color:#aaa;">+600 watching</small>
+                                </div>
+                            </div>
+                            <a href="room.html" class="btn-room-action">Join Room</a>
+                        </div>
+                    </div>
+                    <!-- Live Room 5: Marvel Marathon (Hidden) -->
+                    <div class="room-card room-card-hidden" style="display: none;">
+                        <div class="room-image-wrapper">
+                            <!-- Marvel Logo Text Image -->
+                            <img src="https://images.unsplash.com/photo-1620052581237-5d36667be337?q=80&amp;w=600&amp;auto=format&amp;fit=crop" alt="Marvel" class="room-image">
+                            <!-- Overlay Marvel Logo text if needed by CSS, but image choice is key -->
+                            <div class="room-badges">
+                                <span class="badge badge-live">LIVE</span>
+                                <span class="badge badge-viewers"><i class="fa-solid fa-user" style="margin-right:4px;"></i>
+                                    3,000</span>
+                            </div>
+                        </div>
+                        <div class="room-content">
+                            <div class="room-info">
+                                <h3>Marvel Marathon</h3>
+                                <div class="room-host">
+                                    <i class="fa-solid fa-shield-halved" style="color: #F4D03F;"></i>
+                                    <span style="color: #999;">StarkIndustries</span>
+                                </div>
+                                <div class="room-participants" style="margin-top: 0.5rem; display: flex; align-items: center;">
+                                    <div class="avatar-pile">
+                                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Tony" alt="User">
+                                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Steve" alt="User">
+                                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Nat" alt="User">
+                                    </div>
+                                    <small style="color:#aaa;">+3k watching</small>
+                                </div>
+                            </div>
+                            <a href="room.html" class="btn-room-action">Join Room</a>
+                        </div>
+                    </div>
+                    <!-- Live Room 6: VALORANT Champions (Hidden) -->
+                    <div class="room-card room-card-hidden" style="display: none;">
+                        <div class="room-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&amp;w=600&amp;auto=format&amp;fit=crop" alt="Valorant" class="room-image">
+                            <div class="room-badges">
+                                <span class="badge badge-live">LIVE</span>
+                                <span class="badge badge-viewers"><i class="fa-solid fa-user" style="margin-right:4px;"></i>
+                                    2,890</span>
+                            </div>
+                        </div>
+                        <div class="room-content">
+                            <div class="room-info">
+                                <h3>VALORANT Champions 2026</h3>
+                                <div class="room-host">
+                                    <i class="fa-solid fa-gamepad" style="color: #F4D03F;"></i>
+                                    <span style="color: #999;">ProGamerZ</span>
+                                </div>
+                                <div class="room-participants" style="margin-top: 0.5rem; display: flex; align-items: center;">
+                                    <div class="avatar-pile">
+                                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Jett" alt="User">
+                                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Phoenix" alt="User">
+                                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Sage" alt="User">
+                                    </div>
+                                    <small style="color:#aaa;">+2k watching</small>
+                                </div>
+                            </div>
+                            <a href="room.html" class="btn-room-action">Join Room</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    
+    <section id="pricing" class="section-padding" style="background: var(--bg-secondary);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <h2>Transparent Pricing</h2>
+                <p style="color: var(--text-secondary); margin-top: 1rem;">Choose the plan that fits your lifestyle.
+                </p>
+            </div>
+            <div class="pricing-grid">
+                <!-- Starter -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Starter</h3>
+                        <p style="color: var(--text-secondary);">For casual viewers</p>
+                    </div>
+                    <span class="price">$0<span>/mo</span></span>
+                    <ul class="features-list">
+                        <li><i class="fa-solid fa-check"></i> 720p Streaming</li>
+                        <li><i class="fa-solid fa-check"></i> Standard Sync</li>
+                        <li><i class="fa-solid fa-check"></i> Public Rooms</li>
+                    </ul>
+                    <button class="btn btn-outline" style="width: 100%; border-radius: 30px; padding: 0.8rem;">Current
+                        Plan</button>
+                </div>
+                <!-- Pro -->
+                <div class="pricing-card premium">
+                    <div class="popular-badge">POPULAR</div>
+                    <div class="pricing-header">
+                        <h3>Pro</h3>
+                        <p style="color: var(--text-secondary);">For the binge watchers</p>
+                    </div>
+                    <span class="price">$9.99<span>/mo</span></span>
+                    <ul class="features-list">
+                        <li><i class="fa-solid fa-check"></i> 1080p HD Streaming</li>
+                        <li><i class="fa-solid fa-check"></i> Priority Servers</li>
+                        <li><i class="fa-solid fa-check"></i> Private Rooms</li>
+                        <li><i class="fa-solid fa-check"></i> Ad-free Experience</li>
+                    </ul>
+                    <button class="btn" style="width: 100%; background: linear-gradient(90deg, #7c3aed 0%, #F4D03F 100%); color: #000; border: none; border-radius: 30px; padding: 1.2rem; font-weight: bold; font-size: 1.05rem; box-shadow: 0 4px 15px rgba(253, 185, 19, 0.4); cursor: pointer; transition: 0.3s;" onmouseover="this.style.boxShadow='0 8px 25px rgba(124, 58, 237, 0.6)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.boxShadow='0 4px 15px rgba(124, 58, 237, 0.4)'; this.style.transform='translateY(0)';">Choose
+                        Plan</button>
+                </div>
+                <!-- Ultimate -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Ultimate</h3>
+                        <p style="color: var(--text-secondary);">The cinema experience</p>
+                    </div>
+                    <span class="price">$19.99<span>/mo</span></span>
+                    <ul class="features-list">
+                        <li><i class="fa-solid fa-check"></i> 4K HDR Streaming</li>
+                        <li><i class="fa-solid fa-check"></i> Unlimited Everything</li>
+                        <li><i class="fa-solid fa-check"></i> Early Access Features</li>
+                        <li><i class="fa-solid fa-check"></i> Profile Customization</li>
+                    </ul>
+                    <button class="btn btn-outline" style="width: 100%; border-radius: 30px; padding: 0.8rem;">Choose
+                        Plan</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="download" class="section-padding" style="background: linear-gradient(180deg, var(--bg-primary) 0%, #2a2410 100%); text-align: center;">
+        <div class="container">
+            <h2 style="font-size: 3rem; margin-bottom: 1.5rem;">Ready to Join the Party?</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 3rem; font-size: 1.2rem;">Download the official
+                Wizzapp to join rooms, host parties, and chat with friends.</p>
+            <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                <button id="download-btn-index" class="btn btn-primary" style="padding: 1rem 3rem; font-size: 1.2rem; border: none; cursor: pointer;">
+                    <i class="fa-brands fa-windows" style="margin-right: 10px;"></i> Download for Windows
+                </button>
+            </div>
+            <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-secondary);">Version 2.4.0 • Requires
+                Windows 10/11</p>
+        </div>
+    </section>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-logo-center">
+                <a href="index.html" class="logo">WI<span>ZZ</span></a>
+            </div>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>About</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="newsroom.html">Newsroom</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Community</h4>
+                    <ul class="footer-links">
+                        <li><a href="community.html">Guidelines</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="transparency.html">Transparency</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Safety</h4>
+                    <ul class="footer-links">
+                        <li><a href="safety.html">Safety Hub</a></li>
+                        <li><a href="report-abuse.html">Report Abuse</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Privacy</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="cookies.html">Cookies</a></li>
+                        <li><a href="your-rights.html">Your Rights</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="support.html">Help Center</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+<div class="footer-socials">
+    <a href="https://www.instagram.com/wizz.app" target="_blank" class="social-icon" title="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+    <a href="https://www.tiktok.com/@wizz_app" target="_blank" class="social-icon" title="TikTok">
+        <i class="fa-brands fa-tiktok"></i>
+    </a>
+</div>
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="legal.html">Legal Notice</a>
+                </div>
+                <div class="footer-copy">
+                    <p>© 2026 Wizz. All rights reserved. Made with <i class="fa-solid fa-heart" style="color: var(--accent-red);"></i></p>
+                </div>
+                <div class="footer-lang">
+                    <a href="#"><i class="fa-solid fa-globe"></i> English</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- ROOM INTERFACE (Hidden by Default) -->
+    <div id="room-interface" style="display: none; height: 100vh; overflow: hidden; display: none; flex-direction: column;">
+        <!-- Room Header -->
+        <header style="padding: 1rem 2rem; background: var(--bg-secondary); border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <a href="#" onclick="location.reload()" class="logo" style="font-size: 1.2rem;">STR<span>EVO</span></a>
+                <div style="height: 20px; width: 1px; background: var(--border-color);"></div>
+                <h3 id="currentRoomName" style="margin: 0; font-weight: 500;">Room Name</h3>
+            </div>
+            <div style="display: flex; gap: 1rem; align-items: center;">
+                <button class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.8rem;"><i class="fa-solid fa-user-plus"></i> Invite</button>
+                <div class="user-avatar" style="width: 35px; height: 35px; background: var(--accent-red); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">
+                    You</div>
+            </div>
+        </header>
+        <!-- Room Content -->
+        <div style="flex: 1; display: flex; overflow: hidden;">
+            <!-- Video Area -->
+            <div style="flex: 1; background: #000; display: flex; align-items: center; justify-content: center; position: relative;">
+                <div style="text-align: center; color: #555;">
+                    <i class="fa-regular fa-circle-play" style="font-size: 5rem; margin-bottom: 1rem; opacity: 0.5;"></i>
+                    <p style="font-size: 1.2rem;">Waiting for host to select content...</p>
+                </div>
+                <!-- Mock Player Controls -->
+                <div style="position: absolute; bottom: 0; left: 0; width: 100%; background: linear-gradient(transparent, rgba(0,0,0,0.8)); padding: 2rem 2rem 1rem;">
+                    <div style="height: 5px; background: rgba(255,255,255,0.2); border-radius: 5px; margin-bottom: 1rem;">
+                        <div style="width: 0%; height: 100%; background: var(--accent-red); border-radius: 5px;"></div>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; color: white;">
+                        <div style="display: flex; gap: 1.5rem; font-size: 1.2rem;">
+                            <i class="fa-solid fa-play"></i>
+                            <i class="fa-solid fa-volume-high"></i>
+                            <span>00:00 / 00:00</span>
+                        </div>
+                        <div style="display: flex; gap: 1.5rem; font-size: 1.2rem;">
+                            <i class="fa-solid fa-gear"></i>
+                            <i class="fa-solid fa-expand"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Chat Sidebar -->
+            <div style="width: 350px; background: var(--bg-secondary); border-left: 1px solid var(--border-color); display: flex; flex-direction: column;">
+                <div style="padding: 1rem; border-bottom: 1px solid var(--border-color);">
+                    <h4 style="margin: 0;">Party Chat</h4>
+                </div>
+                <!-- Chat Messages -->
+                <div id="chatMessages" style="flex: 1; padding: 1rem; overflow-y: auto; font-size: 0.9rem; color: var(--text-secondary);">
+                    <div style="margin-bottom: 1rem;">
+                        <span style="color: var(--accent-red); font-weight: bold;">System:</span> Welcome to the room!
+                    </div>
+                </div>
+                <!-- Input -->
+                <div style="padding: 1rem; border-top: 1px solid var(--border-color);">
+                    <div class="input-wrapper">
+                        <input type="text" placeholder="Type a message..." style="padding-left: 1rem;">
+                        <button style="position: absolute; right: 0.5rem; background: none; border: none; color: var(--accent-red); cursor: pointer;"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Smooth scroll animation with JavaScript
+        function smoothScroll(target, duration = 1000) {
+            const element = document.querySelector(target);
+            if (!element) return;
+            const start = window.scrollY;
+            const end = element.offsetTop - 80; // 80px offset for navbar
+            const distance = end - start;
+            let startTime = null;
+            function animation(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                // Easing function (ease-in-out)
+                const easeProgress = progress < 0.5
+                    ? 2 * progress * progress
+                    : -1 + (4 - 2 * progress) * progress;
+                window.scrollTo(0, start + distance * easeProgress);
+                if (progress < 1) {
+                    requestAnimationFrame(animation);
+                }
+            }
+            requestAnimationFrame(animation);
+        }
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    smoothScroll(href, 1200); // 1.2 second animation
+                }
+            });
+        });
+        // Load More button
+        document.addEventListener('DOMContentLoaded', () => {
+            const btnLoadMore = document.getElementById('btn-load-more');
+            if (btnLoadMore) {
+                btnLoadMore.addEventListener('click', () => {
+                    const hiddenCards = document.querySelectorAll('.room-card-hidden');
+                    if (hiddenCards.length === 0) return;
+                    btnLoadMore.innerText = "Loading...";
+                    btnLoadMore.style.opacity = "0.7";
+                    btnLoadMore.style.pointerEvents = "none";
+                    setTimeout(() => {
+                        hiddenCards.forEach(card => {
+                            card.style.display = 'block';
+                            card.animate([
+                                { opacity: 0, transform: 'translateY(20px)' },
+                                { opacity: 1, transform: 'translateY(0)' }
+                            ], {
+                                duration: 500,
+                                easing: 'ease-out',
+                                fill: 'forwards'
+                            });
+                        });
+                        btnLoadMore.style.display = 'none';
+                    }, 500);
+                });
+            }
+            // Add animation styles if not present
+            if (!document.querySelector('style[data-notifications]')) {
+                const animStyle = document.createElement('style');
+                animStyle.setAttribute('data-notifications', 'true');
+                animStyle.textContent = `
+                    @keyframes slideIn {
+                        from {
+                            transform: translateX(400px);
+                            opacity: 0;
+                        }
+                        to {
+                            transform: translateX(0);
+                            opacity: 1;
+                        }
+                    }
+                    @keyframes slideOut {
+                        from {
+                            transform: translateX(0);
+                            opacity: 1;
+                        }
+                        to {
+                            transform: translateX(400px);
+                            opacity: 0;
+                        }
+                    }
+                `;
+                document.head.appendChild(animStyle);
+            }
+            // Notification function
+            function showNotification(message, type = 'error') {
+                console.log('Showing notification:', message);
+                document.querySelectorAll('.notification').forEach(n => n.remove());
+                const notification = document.createElement('div');
+                notification.className = `notification ${type}`;
+                notification.textContent = message;
+                notification.style.cssText = `
+                    position: fixed !important;
+                    top: 20px !important;
+                    right: 20px !important;
+                    padding: 1rem 1.5rem !important;
+                    border-radius: 10px !important;
+                    font-weight: 600 !important;
+                    font-size: 0.95rem !important;
+                    z-index: 999999 !important;
+                    max-width: 380px !important;
+                    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(124, 58, 237, 0.2) !important;
+                    background: linear-gradient(135deg, rgba(124, 58, 237, 0.15) 0%, rgba(244, 208, 63, 0.1) 100%) !important;
+                    border: 1px solid rgba(244, 208, 63, 0.5) !important;
+                    color: #F4D03F !important;
+                    left: auto !important;
+                    bottom: auto !important;
+                    backdrop-filter: blur(8px) !important;
+                    -webkit-backdrop-filter: blur(8px) !important;
+                    animation: slideIn 0.3s ease !important;
+                `;
+                document.body.appendChild(notification);
+                setTimeout(() => {
+                    notification.style.animation = 'slideOut 0.3s ease !important';
+                    setTimeout(() => notification.remove(), 300);
+                }, 4000);
+            }
+            // Choose Plan buttons - find all buttons in pricing cards
+            const pricingCards = document.querySelectorAll('.pricing-card');
+            console.log('Found pricing cards:', pricingCards.length);
+            pricingCards.forEach(card => {
+                const btn = card.querySelector('button');
+                if (btn) {
+                    console.log('Found button:', btn.textContent);
+                    btn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        console.log('Button clicked');
+                        showNotification('Please login to purchase a plan', 'warning');
+                    });
+                }
+            });
+        });
+    </script>
+    <!-- Removed inline script as it's better to use external script.js where we added logic -->
+    <script src="script.js"></script>
+<script>
+// Developer Tools Protection
+(function() {
+    // F12 ve Ctrl+Shift+I korumas�
+    document.addEventListener('keydown', function(e) {
+        // F12
+        if (e.key === 'F12') {
+            e.preventDefault();
+            return false;
+        }
+        // Ctrl+Shift+I (Inspect)
+        if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+            e.preventDefault();
+            return false;
+        }
+        // Ctrl+Shift+C (Inspect Element)
+        if (e.ctrlKey && e.shiftKey && e.key === 'C') {
+            e.preventDefault();
+            return false;
+        }
+        // Ctrl+Shift+J (Console)
+        if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+            e.preventDefault();
+            return false;
+        }
+        // Ctrl+Shift+K (Console - Firefox)
+        if (e.ctrlKey && e.shiftKey && e.key === 'K') {
+            e.preventDefault();
+            return false;
+        }
+    });
+    // Right-click korumas�
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        return false;
+    });
+    // DevTools a��lm�� m� kontrol et
+    let devtools = { open: false, orientation: null };
+    const threshold = 160;
+    setInterval(function() {
+        if (window.outerHeight - window.innerHeight > threshold || 
+            window.outerWidth - window.innerWidth > threshold) {
+            if (!devtools.open) {
+                devtools.open = true;
+                console.clear();
+                console.log('%cDeveloper Tools Disabled', 'color: red; font-size: 20px; font-weight: bold;');
+            }
+        } else {
+            devtools.open = false;
+        }
+    }, 500);
+})();
+</script>
+<script defer="" src="/_external/static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516/index.html" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;0e397988d8ee4e38bfe9f6e6c2db6d38&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+
+
+
+
+
+
+</body></html>
